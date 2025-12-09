@@ -1099,7 +1099,7 @@ body {
   }
 
   .hero-bg-image {
-    margin-left: -100px !important;
+    margin-left: 0px !important;
   }
 
   .hero-title {
@@ -1338,5 +1338,11 @@ body {
   }
   .hero-content{
     margin-top: 100px;
+  }
+  .hero-sub{
+    display: none;
+  }
+  .section-header{
+    padding: 20px;
   }
 }
