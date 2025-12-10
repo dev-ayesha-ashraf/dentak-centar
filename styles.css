@@ -1,3 +1,5 @@
+@import url('styles-dropdown.css');
+
 * {
   margin: 0;
   padding: 0;
@@ -112,7 +114,8 @@ body {
 
 .nav-link {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
+  /* User requested 18px-20px */
   color: #000000;
   font-weight: 300;
   transition: color 0.3s ease;
@@ -218,23 +221,23 @@ body {
 }
 
 .hero-title {
-  font-size: 85px;
+  font-size: 65px;
   font-weight: 400;
   color: #FFFFFF;
-  line-height: 95px;
+  line-height: 75px;
   letter-spacing: 1.7px;
   text-transform: capitalize;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.9);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .hero-description {
-  font-size: 22px;
+  font-size: 18px;
   color: #FFFFFF;
-  line-height: 30px;
+  line-height: 26px;
   letter-spacing: 0.44px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.85);
-  margin-bottom: 65px;
+  margin-bottom: 45px;
 }
 
 .hero-buttons {
@@ -254,6 +257,7 @@ body {
   font-size: 23px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  justify-content: center;
 }
 
 .btn-primary:hover {
@@ -330,7 +334,7 @@ body {
 }
 
 .section-header {
-  margin-bottom: 45px;
+  margin-bottom: 5px;
 }
 
 .section-subtitle {
@@ -351,7 +355,7 @@ body {
 }
 
 .about-description {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 300;
   color: #535353;
   line-height: 28px;
@@ -380,6 +384,8 @@ body {
   width: 29px;
   height: 29px;
 }
+
+@import url('styles-dropdown.css');
 
 /* Services Section */
 .services {
@@ -447,6 +453,21 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 130px;
+}
+
+.service-card {
+  position: relative;
+  opacity: 0.9 !important;
+  width: 530px;
+  height: 430px;
+  transform: none !important;
+  cursor: pointer;
+  transition: transform 0.3s ease !important;
+}
+
+.service-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .service-number {
@@ -519,7 +540,7 @@ body {
 }
 
 .review-text {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   color: #000000;
   line-height: 24px;
@@ -546,7 +567,7 @@ body {
 .rating-text {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 18px;
   color: #5E6A71;
 }
 
@@ -632,7 +653,7 @@ body {
 
 .contact-grid {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 55px;
   padding: 0 90px;
 }
@@ -649,17 +670,18 @@ body {
 }
 
 .contact-details h3 {
-  font-size: 28px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.58);
   letter-spacing: 0.56px;
-  margin-bottom: 22px;
+  margin-bottom: 10px;
 }
 
 .contact-details p {
-  font-size: 22px;
+  font-size: 16px;
   color: #FFFFFF;
   letter-spacing: 0.44px;
-  line-height: 25px;
+  line-height: 20px;
+  white-space: nowrap;
 }
 
 /* Footer */
@@ -687,27 +709,23 @@ body {
 }
 
 .footer-column h3 {
-  font-size: 37px;
+  font-size: 24px;
   color: #000000;
-  line-height: 47px;
-  margin-bottom: 37px;
-}
-
-.footer-column ul {
-  list-style: none;
+  line-height: 32px;
+  margin-bottom: 24px;
 }
 
 .footer-column ul li {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .footer-column ul li a {
   text-decoration: none;
   font-weight: 300;
   color: #656565;
-  line-height: 47px;
+  line-height: 32px;
   transition: color 0.3s ease;
-  font-size: 32.03px;
+  font-size: 18px;
 }
 
 .footer-column ul li a:hover {
@@ -765,7 +783,7 @@ body {
 
 .footer-links a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 22px;
   color: #000000;
   line-height: 24px;
   text-transform: capitalize;
@@ -1334,12 +1352,14 @@ body {
     border: none !important;
     width: 100% !important;
   }
-  .about-text{
+
+  .about-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .hero-bg-image {
     margin-left: 0px !important;
   }

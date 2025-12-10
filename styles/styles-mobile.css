@@ -1,0 +1,342 @@
+/* Modern Mobile Menu Styles */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  z-index: 2050;
+  /* Above overlay */
+}
+
+.hamburger-icon {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #294295;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger-icon span:nth-child(2) {
+  top: 9px;
+}
+
+.hamburger-icon span:nth-child(3) {
+  top: 18px;
+}
+
+/* Hamburger Animation */
+.hamburger-icon.open span {
+  background: #FFFFFF;
+}
+
+.hamburger-icon.open span:nth-child(1) {
+  top: 9px;
+  transform: rotate(135deg);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+  top: 9px;
+  transform: rotate(-135deg);
+}
+
+@media (max-width: 1000px) {
+
+  /* Header Layout Reording */
+  .hamburger-menu {
+    display: block;
+    order: 3;
+    /* Right */
+  }
+
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 10px 0;
+  }
+
+  .logo {
+    order: 1;
+    /* Left */
+    position: relative;
+    z-index: 2060;
+    /* Above overlay */
+    transition: all 0.3s ease;
+  }
+
+  .logo img {
+    width: 90px;
+    height: auto;
+  }
+
+  /* Pinned Elements when Menu Open */
+  body.menu-open .logo {
+    position: fixed;
+    top: 35px;
+    /* Adjust alignment to match open state */
+    left: 20px;
+    z-index: 2100;
+  }
+
+  body.menu-open .hamburger-menu {
+    position: fixed;
+    top: 55px;
+    /* Align with logo center */
+    right: 20px;
+    z-index: 2100;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+    /* Prevent scrolling background */
+  }
+
+  .cta-button {
+    order: 2;
+    /* Center */
+    display: block !important;
+    margin: 0;
+    position: relative;
+    z-index: 100;
+    /* Below overlay */
+    transform: none !important;
+  }
+
+  /* Hide CTA when menu open */
+  body.menu-open .cta-button {
+    display: none !important;
+  }
+
+  /* Fade Hero when menu open to prevent bleed-through */
+  body.menu-open .hero,
+  body.menu-open .page-hero {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .btn-contact {
+    padding: 8px 16px;
+    font-size: 13px;
+    gap: 5px;
+    height: auto;
+  }
+
+  .btn-contact img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Full Screen Glassmorphism Overlay */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(41, 66, 149, 0.98);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Push content to top then pad down */
+    align-items: center;
+    /* Below logo/hamburger */
+
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    pointer-events: none;
+    z-index: 9;
+    /* User request */
+  }
+
+  /* Hide Header Top when menu open */
+  body.menu-open .header-top {
+    display: none !important;
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    pointer-events: all;
+  }
+
+  .nav-menu li {
+    margin: 0;
+    /* Remove vertical margin to use border-bottom instead */
+    text-align: left;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.4s ease;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-menu li:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-menu.active li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Staggered Delay */
+  .nav-menu.active li:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  .nav-menu.active li:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+
+  .nav-menu.active li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+
+  .nav-menu.active li:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+
+  .nav-menu.active li:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+
+  /* Update padding for menu items position */
+  .nav-menu {
+    padding-top: 120px;
+  }
+
+  .nav-link {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    display: block;
+    padding: 15px 30px;
+    /* Larger hit area + Left padding */
+    width: 100%;
+  }
+
+  .nav-link.active {
+    color: #4CC7DD !important;
+  }
+
+  /* "Vaš kutak" Button Styling */
+  #vas-kutak-link {
+    background: #4CC7DD;
+    padding: 12px 30px;
+    border-radius: 50px;
+    color: #FFFFFF !important;
+    font-size: 24px !important;
+    margin-top: 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 199, 221, 0.3);
+  }
+
+  #vas-kutak-link:hover {
+    background: #3BB1C6;
+    transform: translateY(-2px);
+  }
+
+  /* Mobile Dropdown - Centered & Overlap */
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    width: calc(100% - 60px);
+    max-width: 280px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 15px 0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 2070;
+    display: none;
+    opacity: 0;
+    text-align: center;
+    margin: 15px 0 0 30px;
+  }
+
+  /* Disable Hover on Mobile, rely on Click */
+  .nav-item:hover .dropdown-menu {
+    display: none;
+    /* Controlled by JS class 'active' or 'show' */
+  }
+
+  /* Only show when class 'show' is added by JS */
+  .dropdown-menu.show {
+    display: block !important;
+    opacity: 1 !important;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .dropdown-menu li a {
+    color: #333 !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    padding: 10px;
+  }
+
+  .dropdown-menu li a:hover {
+    background: #f0f8ff;
+    color: #294295 !important;
+  }
+
+  /* Hide Desktop CTA inside menu */
+  .nav-menu .cta-button {
+    display: none !important;
+  }
+
+  .dropdown-arrow-icon {
+    color: #4CC7DD;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

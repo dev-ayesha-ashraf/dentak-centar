@@ -12,11 +12,11 @@
   padding: 0 80px;
 }
 
-@media(max-width: 1000px){
-  .contact-wrapper{
-padding : 0 20px;
+@media(max-width: 1000px) {
+  .contact-wrapper {
+    padding: 0 20px;
   }
-  
+
 }
 
 .contact-form h2 {
@@ -31,7 +31,7 @@ padding : 0 20px;
 
 .form-group label {
   display: block;
-  font-size: 16px;
+  font-size: 22px;
   color: #333;
   margin-bottom: 8px;
   font-weight: 500;
@@ -44,7 +44,7 @@ padding : 0 20px;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 20px;
   font-family: 'Outfit', sans-serif;
   transition: border-color 0.3s ease;
 }
@@ -113,14 +113,14 @@ padding : 0 20px;
   font-size: 20px;
 }
 
-.contact-details h4 {
-  font-size: 20px;
+.contact-details-i h4 {
+  font-size: 25px !important;
   color: #333;
   margin-bottom: 5px;
 }
 
-.contact-details p {
-  font-size: 16px;
+.contact-details-i p {
+  font-size: 20px !important;
   color: #666;
   line-height: 1.5;
 }
@@ -129,7 +129,7 @@ padding : 0 20px;
   margin-top: 40px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .faq-section {
@@ -143,7 +143,19 @@ padding : 0 20px;
   color: #294295;
   margin-bottom: 60px;
 }
-
+.btn-contact {
+  background-color: #A89C8C;
+  border: none;
+  border-radius: 71px;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #FFFFFF;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -170,7 +182,7 @@ padding : 0 20px;
 }
 
 .faq-item p {
-  font-size: 16px;
+  font-size: 18px;
   color: #666;
   line-height: 1.6;
 }
@@ -180,7 +192,7 @@ padding : 0 20px;
     grid-template-columns: 1fr;
     gap: 60px;
   }
-  
+
   .faq-grid {
     grid-template-columns: 1fr;
   }
@@ -191,11 +203,11 @@ padding : 0 20px;
     grid-template-columns: 1fr;
     gap: 0;
   }
-  
+
   .contact-form h2 {
     font-size: 32px;
   }
-  
+
   .faq-section h2 {
     font-size: 32px;
   }

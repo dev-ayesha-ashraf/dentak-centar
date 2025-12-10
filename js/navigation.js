@@ -1,6 +1,4 @@
-// Handle active navigation links
 document.addEventListener('DOMContentLoaded', function() {
-  // Get current page filename
   const currentPage = window.location.pathname.split('/').pop();
   
   // Remove .html extension for comparison

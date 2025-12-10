@@ -1,0 +1,218 @@
+/* Dropdown Styles */
+.nav-item {
+    position: relative;
+    /* Removed display:flex so children stack/flow naturally */
+}
+
+/* Desktop: Link and Arrow inline */
+.mobile-dropdown-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown-toggle-btn {
+    cursor: pointer;
+    padding: 5px;
+    /* Hit area */
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-arrow-icon {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+    color: #4CC7DD;
+    /* Ensure visible on desktop */
+}
+
+.nav-item:hover .dropdown-arrow-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 1000;
+    list-style: none;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Subtle border */
+    margin-top: 10px;
+    /* Space from link */
+}
+
+/* Arrow tip on top of dropdown */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background: #FFFFFF;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+    margin: 2px 0;
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #444 !important;
+    text-decoration: none;
+    font-size: 16px !important;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400 !important;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(76, 199, 221, 0.08);
+    color: #4CC7DD !important;
+    transform: translateX(3px);
+}
+
+/* Mobile Adjustments for Dropdown */
+@media (max-width: 1000px) {
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-dropdown-header {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .dropdown-arrow-icon {
+        color: #4CC7DD;
+        font-size: 24px;
+        /* Larger hit target */
+        margin-left: 15px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        /* Flow in document */
+        transform: none;
+        background: rgba(255, 255, 255, 0.05);
+        /* Subtle background in mobile menu */
+        box-shadow: none;
+        border: none;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        /* Hidden by default */
+        width: 280px;
+        /* Fixed width matching overlay style */
+        padding: 10px 0;
+        margin-top: 15px;
+        border-radius: 10px;
+        background: #FFFFFF;
+        /* White card effect */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+        position: absolute;
+        /* Overlap behavior enabled again */
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2080;
+    }
+
+    .dropdown-menu.active {
+        display: block;
+        animation: fadeIn 0.4s ease;
+    }
+
+    .dropdown-menu::before {
+        display: none;
+    }
+
+    /* Disable Hover on Mobile, rely on Click */
+    .nav-item:hover .dropdown-menu {
+        display: none;
+        transform: none !important;
+    }
+
+    /* Unless header is also clicked? No, separate button */
+    .nav-item .dropdown-menu.show {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Main Nav Items: Left Align */
+    .nav-menu li {
+        width: 100%;
+        text-align: left;
+        /* Shift from center to left */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        /* Separator */
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 15px 30px;
+        /* Padding for clickability */
+    }
+
+    .nav-menu li:hover {
+        background: rgba(255, 255, 255, 0.05);
+        /* Removed padding-left shift to prevent dropdown movement */
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    /* Dropdown Items: Right Align (User Request) */
+    .dropdown-menu li a {
+        color: #333 !important;
+        font-size: 18px !important;
+        text-align: center !important;
+        /* Right aligned as requested */
+        padding: 12px 25px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        background: transparent;
+        white-space: normal;
+    }
+
+    .dropdown-menu li:last-child a {
+        border-bottom: none;
+    }
+
+    .dropdown-menu li a:hover {
+        color: #4CC7DD !important;
+        background: rgba(76, 199, 221, 0.08);
+        /* Removed transform and padding shift to prevent movement */
+    }
+}

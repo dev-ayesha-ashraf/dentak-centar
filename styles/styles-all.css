@@ -1,3 +1,5 @@
+@import url('styles-dropdown.css');
+
 /* Common styles for all pages */
 * {
   margin: 0;
@@ -114,6 +116,7 @@ body {
 .nav-link {
   text-decoration: none;
   font-size: 18px;
+  /* User requested 18px-20px */
   color: #000000;
   font-weight: 300;
   transition: color 0.3s ease;
@@ -162,7 +165,7 @@ body {
 
 /* Common Section Styles */
 .section-header {
-  margin-bottom: 45px;
+  margin-bottom: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -226,148 +229,196 @@ body {
   margin: 0 auto;
 }
 
-/* Footer (same for all pages) */
+/* Modern Footer Styles */
 .footer {
-  background: rgba(76, 199, 221, 0.12);
-  padding: 38px 0;
+  background: #f8fcfd;
+  /* Very subtle cyan tint or keep white/light grey */
+  padding: 25px 0 25px;
+  border-top: 1px solid rgba(76, 199, 221, 0.1);
 }
 
 .footer-logo {
   text-align: center;
-  margin-bottom: 59px;
+  margin-bottom: 70px;
 }
 
 .footer-logo img {
-  width: 140px;
-  height: 111px;
+  width: 160px;
+  height: auto;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 135px;
-  padding: 0 182px;
-  margin-bottom: 59px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 0 40px;
+  margin-bottom: 80px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-column h3 {
-  font-size: 37px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
   color: #000000;
-  line-height: 47px;
-  margin-bottom: 37px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Optional decorative underline for headers */
+.footer-column h3::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background: #4CC7DD;
+  bottom: -8px;
+  left: 0;
+  border-radius: 2px;
 }
 
 .footer-column ul {
   list-style: none;
+  padding: 0;
 }
 
 .footer-column ul li {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .footer-column ul li a {
   text-decoration: none;
-  font-weight: 300;
-  color: #656565;
-  line-height: 47px;
-  transition: color 0.3s ease;
-  font-size: 32.03px;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  font-size: 22px;
+  /* Increased font size */
+  display: inline-block;
 }
 
 .footer-column ul li a:hover {
   color: #4CC7DD;
+  transform: translateX(5px);
 }
 
 .footer-map img {
-  width: 364px;
-  height: 314px;
-  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.footer-map img:hover {
+  transform: translateY(-5px);
 }
 
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 13px 188px;
-  border-top: 1px solid rgba(41, 66, 149, 0.3);
+  padding: 30px 40px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  /* Softer border */
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .footer-copyright p {
-  font-size: 18px;
-  color: #000000;
-  line-height: 24px;
+  font-size: 16px;
+  color: #777;
+  line-height: 1.5;
 }
 
 .footer-social {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 
 .footer-social a {
-  width: 38px;
-  height: 38px;
-  border: 1.5px solid #294295;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   transition: all 0.3s ease;
+  color: #294295;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.footer-social a:hover {
+  background: #294295;
+  color: #fff;
+  border-color: #294295;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(41, 66, 149, 0.2);
 }
 
 .footer-social i {
-  width: 20px;
-  height: 20px;
-  color: #294295;
+  font-size: 20px;
+  margin-top: -10px;
 }
 
 .footer-links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .footer-links a {
   text-decoration: none;
-  font-size: 18px;
-  color: #000000;
-  line-height: 24px;
-  text-transform: capitalize;
+  font-size: 16px;
+  color: #777;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #4CC7DD;
+  color: #294295;
 }
 
 .footer-links span {
-  font-family: 'Archivo', sans-serif;
-  font-size: 16px;
-  color: rgba(41, 66, 149, 0.6);
+  display: none;
+  /* Hide separator if using gap */
 }
-@media(max-width: 1000px){
-  .navbar{
-  margin-top: 0px !important;
-  border: none !important;
-  width: 100% !important;
+
+@media(max-width: 1000px) {
+  .navbar {
+    margin-top: 0px !important;
+    border: none !important;
+    width: 100% !important;
   }
-  .hero-content{
+
+  .hero-content {
     margin-top: 100px;
   }
-  .hero-sub{
+
+  .hero-sub {
     display: none;
   }
-  .section-header{
+
+  .section-header {
     padding: 20px;
   }
 }
+
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .footer-content {
     padding: 0 60px;
-    gap: 80px;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns on tablet */
   }
-  
+
   .footer-bottom {
     padding: 13px 60px;
   }
@@ -377,13 +428,25 @@ body {
   .page-hero h1 {
     font-size: 48px;
   }
-  
+
   .footer-content {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    /* 1 column on mobile */
+    text-align: center;
     padding: 0 30px;
     gap: 40px;
   }
-  
+
+  .footer-column h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-social,
+  .footer-links {
+    justify-content: center;
+  }
+
   .footer-bottom {
     flex-direction: column;
     gap: 20px;
@@ -395,25 +458,9 @@ body {
 /* Add these responsive styles to styles-all.css */
 
 /* RESPONSIVE STYLES - Only for smaller screens */
-@media (max-width: 1800px) {
-  .contact-info {
-    padding-left: 60px !important;
-  }
-}
+/* Removed 1800px query to match index.html alignment */
 
-@media (max-width: 1200px) {
-  .container {
-    padding: 0 30px;
-  }
-
-  .contact-info {
-    padding-left: 60px !important;
-  }
-
-  .nav-menu {
-    gap: 40px !important;
-  }
-}
+/* Removed 1200px query to match index.html alignment */
 
 @media (max-width: 1000px) {
   body {
@@ -500,11 +547,11 @@ body {
   body {
     zoom: 0.8;
   }
-  
+
   .page-hero h1 {
     font-size: 32px !important;
   }
-  
+
   .page-hero p {
     font-size: 18px !important;
     padding: 0 20px;

@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="hr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>O nama - Dental Centar Dubrava</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Montserrat:wght@400;600&family=Poppins:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="./styles-all.css">
-  <link rel="stylesheet" href="./styles-about.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Montserrat:wght@400;600&family=Poppins:wght@400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../styles/styles-all.css">
+  <link rel="stylesheet" href="../styles/styles-about.css">
+  <link rel="stylesheet" href="../styles/styles-mobile.css">
 </head>
+
 <body>
-<header class="header">
+  <header class="header">
     <div class="header-top">
       <div class="container">
         <div class="contact-info">
@@ -45,18 +51,37 @@
             <img src="https://static.codia.ai/image/2025-12-09/BAkdEmcQsD.png" alt="Dental Centar Dubrava Logo">
           </div>
 
+          <div class="hamburger-menu">
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
           <ul class="nav-menu">
-            <li><a href="index.html" class="nav-link">Početna</a></li>
-            <li class="nav-dropdown">
-              <a href="services.html" class="nav-link active">Usluge</a>
-              <img src="https://static.codia.ai/image/2025-12-09/jUUumSHjOB.png" alt="Arrow" class="dropdown-arrow">
+            <li><a href="../index.html" class="nav-link">Početna</a></li>
+            <li class="nav-item">
+              <div class="mobile-dropdown-header">
+                <a href="services.html" class="nav-link">Usluge</a>
+                <span class="dropdown-toggle-btn">
+                  <i class="bi bi-chevron-down dropdown-arrow-icon"></i>
+                </span>
+              </div>
+              <ul class="dropdown-menu">
+                <li><a href="implantati.html">Implantati</a></li>
+                <li><a href="protetika.html">Protetika</a></li>
+                <li><a href="izbjeljivanje.html">Izbjeljivanje</a></li>
+                <li><a href="ljuskice.html">Ljuskice</a></li>
+                <li><a href="oralna-kirurgija.html">Oralna kirurgija</a></li>
+                <li><a href="parodontologija.html">Parodontologija</a></li>
+              </ul>
             </li>
-            <li class="nav-dropdown">
+            <li class="nav-item">
               <a href="about.html" class="nav-link">O nama</a>
-              <img src="https://static.codia.ai/image/2025-12-09/UMuZahHj79.png" alt="Arrow" class="dropdown-arrow">
             </li>
             <li><a href="contact.html" class="nav-link">Kontakt</a></li>
-            <li><a href="vas-kutak.html" class="nav-link">Vaš kutak</a></li>
+            <li><a href="vas-kutak.html" class="nav-link" >Vaš kutak</a></li>
           </ul>
 
           <div class="cta-button">
@@ -85,9 +110,11 @@
         <div class="about-text">
           <h2>Dobrodošli u Dental Centar Dubrava</h2>
           <p class="intro-text">
-            Dental Centar Dubrava je moderna stomatološka ordinacija osnovana 2010. godine s ciljem pružanja vrhunske dentalne skrbi u ugodnom i sigurnom okruženju. Naša misija je omogućiti svakom pacijentu zdrav i prekrasan osmijeh koristeći najnoviju tehnologiju i individualni pristup.
+            Dental Centar Dubrava je moderna stomatološka ordinacija osnovana 2010. godine s ciljem pružanja vrhunske
+            dentalne skrbi u ugodnom i sigurnom okruženju. Naša misija je omogućiti svakom pacijentu zdrav i prekrasan
+            osmijeh koristeći najnoviju tehnologiju i individualni pristup.
           </p>
-          
+
           <div class="about-stats">
             <div class="stat-item">
               <div class="stat-number">15+</div>
@@ -109,13 +136,14 @@
 
           <h3>Naša filozofija</h3>
           <p>
-            Vjerujemo da svaki osmijeh zaslužuje posebnu pažnju. Kombiniramo najnoviju tehnologiju s ljudskim pristupom kako bismo osigurali da se svaki pacijent osjeća ugodno i sigurno tijekom cijelog tretmana.
+            Vjerujemo da svaki osmijeh zaslužuje posebnu pažnju. Kombiniramo najnoviju tehnologiju s ljudskim pristupom
+            kako bismo osigurali da se svaki pacijent osjeća ugodno i sigurno tijekom cijelog tretmana.
           </p>
 
         </div>
 
         <div class="about-image">
-          <img src="./about-onama.webp" alt="Dental Centar Dubrava interior">
+          <img src="../images/about-onama.webp" alt="Dental Centar Dubrava interior">
           <div class="image-overlay">
             <p>Naša moderna ordinacija - mjesto gdje se stvaraju prekrasni osmiješi</p>
           </div>
@@ -127,15 +155,17 @@
   <!-- Featured Services Grid (3 boxes) -->
   <section class="featured-services">
     <div class="container">
-      
+
       <div class="featured-grid">
         <!-- Service 1 -->
         <div class="featured-service-card">
           <div class="service-icon">
-           <img src="./duska.webp" alt="">
+            <img src="../images/duska.webp" alt="">
           </div>
           <h3>Duška Đurić dr.med.dent.</h3>
-          <p class="service-description">Najviše se bavi impalntologijom i dentalnom protetikom. Kontinuirano se usavršava na međunarodnim kongresima, predavanjima i tečajevima te primjenjuje nove procese i tehnologije u svakodnevnom radu.</p>
+          <p class="service-description">Najviše se bavi impalntologijom i dentalnom protetikom. Kontinuirano se
+            usavršava na međunarodnim kongresima, predavanjima i tečajevima te primjenjuje nove procese i tehnologije u
+            svakodnevnom radu.</p>
           <div class="service-features">
             <span>Individualni pristup</span>
             <span>Visoka uspješnost</span>
@@ -147,10 +177,12 @@
         <div class="featured-service-card">
           <div class="service-icon">
             <!-- <i class="bi bi-stars"></i> -->
-             <img src="./mihane.webp" alt="" srcset="">
+            <img src="../images/mihane.webp" alt="" srcset="">
           </div>
           <h3>Mihane Haliti</h3>
-          <p class="service-description">Naše dentalne asistentice, svojim smirenim i toplim pristupom, upotpunjuju kvalitetu dentalnog tima. Uvijek vesele, nasmijane i spremne pomoći kolegama i pacijentima, u što ćete imati priliku uvjeriti se sami. </p>
+          <p class="service-description">Naše dentalne asistentice, svojim smirenim i toplim pristupom, upotpunjuju
+            kvalitetu dentalnog tima. Uvijek vesele, nasmijane i spremne pomoći kolegama i pacijentima, u što ćete imati
+            priliku uvjeriti se sami. </p>
           <div class="service-features">
             <span>Ljuskice</span>
             <span>Izbjeljivanje</span>
@@ -163,11 +195,13 @@
         <div class="featured-service-card">
           <div class="service-icon">
             <!-- <i class="bi bi-heart-pulse"></i> -->
-             <img src="./adnan.webp" alt="">
+            <img src="../images/adnan.webp" alt="">
           </div>
           <h3>
-Adnan Šabanović dent.teh.</h3>
-          <p class="service-description">Iza svih radova stoji odlična suradnja naših tehničara i doktorica, kao i već spomenuta individualna prilagodba svakom pacijentu (u planiranju, odabiru materijala, individualnom odabiru boje).</p>
+            Adnan Šabanović dent.teh.</h3>
+          <p class="service-description">Iza svih radova stoji odlična suradnja naših tehničara i doktorica, kao i već
+            spomenuta individualna prilagodba svakom pacijentu (u planiranju, odabiru materijala, individualnom odabiru
+            boje).</p>
           <div class="service-features">
             <span>Skaliranje</span>
             <span>Liječenje gingivitisa</span>
@@ -190,12 +224,12 @@ Adnan Šabanović dent.teh.</h3>
           <div class="footer-column">
             <h3>Usluge</h3>
             <ul>
-              <li><a href="services.html#implantati">Implantati</a></li>
-              <li><a href="services.html#protetika">Protetika</a></li>
-              <li><a href="services.html#izbjeljivanje">Izbjeljivanje</a></li>
-              <li><a href="services.html#ljuskice">Ljuskice</a></li>
-              <li><a href="services.html#kirurgija">Oralna kirurgija</a></li>
-              <li><a href="services.html#parodontologija">Parodontologija</a></li>
+              <li><a href="implantati.html">Implantati</a></li>
+              <li><a href="protetika.html">Protetika</a></li>
+              <li><a href="izbjeljivanje.html">Izbjeljivanje</a></li>
+              <li><a href="ljuskice.html">Ljuskice</a></li>
+              <li><a href="oralna-kirurgija.html">Oralna kirurgija</a></li>
+              <li><a href="parodontologija.html">Parodontologija</a></li>
             </ul>
           </div>
 
@@ -244,6 +278,7 @@ Adnan Šabanović dent.teh.</h3>
     </div>
   </footer>
 
-  <script src="./navigation.js"></script>
+  <script src="../script.js"></script>
 </body>
+
 </html>

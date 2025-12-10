@@ -2,6 +2,7 @@
 .about-content {
   padding: 80px 0;
   background: white;
+  margin-bottom: 80px !important;
 }
 
 .about-main {
@@ -21,7 +22,7 @@
 }
 
 .intro-text {
-  font-size: 18px;
+  font-size: 22px !important;
   color: #666;
   line-height: 1.8;
   margin-bottom: 40px;
@@ -34,7 +35,7 @@
 }
 
 .about-text p {
-  font-size: 16px;
+  font-size: 22px;
   color: #666;
   line-height: 1.8;
   margin-bottom: 25px;
@@ -63,7 +64,7 @@
 }
 
 .stat-label {
-  font-size: 16px;
+  font-size: 18px !important;
   color: #294295;
   font-weight: 500;
 }
@@ -78,7 +79,7 @@
   padding: 12px 0;
   padding-left: 40px;
   position: relative;
-  font-size: 16px;
+  font-size: 22px;
   color: #333;
   border-bottom: 1px solid #eee;
 }
@@ -106,8 +107,11 @@
 
 .about-image img {
   width: 100%;
-  height: auto;
+  height: 500px;
+  /* Fixed height for consistency */
   display: block;
+  object-fit: cover;
+  /* Ensure image covers area without distortion */
 }
 
 .image-overlay {
@@ -122,7 +126,7 @@
 
 .image-overlay p {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   text-align: center;
 }
@@ -142,7 +146,7 @@
 }
 
 .cta-content p {
-  font-size: 18px;
+  font-size: 20px;
   opacity: 0.9;
   margin-bottom: 40px;
   max-width: 600px;
@@ -201,7 +205,7 @@
 }
 
 .section-description {
-  font-size: 18px;
+  font-size: 22px;
   color: #666;
   max-width: 600px;
   margin: 0 auto;
@@ -253,14 +257,14 @@
 }
 
 .featured-service-card h3 {
-  font-size: 24px;
+  font-size: 26px;
   color: #294295;
   margin-bottom: 15px;
   font-weight: 600;
 }
 
 .featured-service-card .service-description {
-  font-size: 16px;
+  font-size: 20px;
   color: #666;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -281,7 +285,7 @@
   color: #4CC7DD;
   padding: 6px 15px;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -289,7 +293,7 @@
   color: #294295;
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -353,22 +357,32 @@
   .about-main {
     height: 670px;
     margin-bottom: 30px;
+    align-items: center;
+    /* Center align images */
   }
 
   .about-image {
+    height: 75%;
+    /* Changed from 100% to 75% */
+  }
+
+  .about-image img {
     height: 100%;
+    /* Fill the container which is 75% of parent */
+    object-fit: cover;
   }
 }
 
 @media(max-width: 1000px) {
   .about-main {
-    padding: 0 20px ;
+    padding: 0 20px;
   }
 
-  .featured-grid{
-    padding : 0 20px;
+  .featured-grid {
+    padding: 0 20px;
   }
-  .service-icon img{
+
+  .service-icon img {
     width: 90px !important;
     height: 90px !important;
   }

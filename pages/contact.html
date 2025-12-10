@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="hr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt - Dental Centar Dubrava</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Montserrat:wght@400;600&family=Poppins:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="./styles-all.css">
-  <link rel="stylesheet" href="./styles-contact.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Montserrat:wght@400;600&family=Poppins:wght@400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../styles/styles-all.css">
+  <link rel="stylesheet" href="../styles/styles-contact.css">
+  <link rel="stylesheet" href="../styles.css">
+  <!-- Mobile Styles last to override -->
+  <link rel="stylesheet" href="../styles/styles-mobile.css">
 </head>
+
 <body>
-  <!-- Header (same as index.html) -->
+  <!-- Header -->
   <header class="header">
     <div class="header-top">
       <div class="container">
@@ -46,17 +54,37 @@
             <img src="https://static.codia.ai/image/2025-12-09/BAkdEmcQsD.png" alt="Dental Centar Dubrava Logo">
           </div>
 
+          <div class="hamburger-menu">
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <!-- In the header section, update nav-menu -->
           <ul class="nav-menu">
-            <li><a href="index.html" class="nav-link">Početna</a></li>
-            <li class="nav-dropdown">
-              <a href="services.html" class="nav-link active">Usluge</a>
-              <img src="https://static.codia.ai/image/2025-12-09/jUUumSHjOB.png" alt="Arrow" class="dropdown-arrow">
+            <li><a href="../index.html" class="nav-link">Početna</a></li>
+            <li class="nav-item">
+              <div class="mobile-dropdown-header">
+                <a href="services.html" class="nav-link">Usluge</a>
+                <span class="dropdown-toggle-btn">
+                  <i class="bi bi-chevron-down dropdown-arrow-icon"></i>
+                </span>
+              </div>
+              <ul class="dropdown-menu">
+                <li><a href="implantati.html">Implantati</a></li>
+                <li><a href="protetika.html">Protetika</a></li>
+                <li><a href="izbjeljivanje.html">Izbjeljivanje</a></li>
+                <li><a href="ljuskice.html">Ljuskice</a></li>
+                <li><a href="oralna-kirurgija.html">Oralna kirurgija</a></li>
+                <li><a href="parodontologija.html">Parodontologija</a></li>
+              </ul>
             </li>
-            <li class="nav-dropdown">
+            <li class="nav-item">
               <a href="about.html" class="nav-link">O nama</a>
-              <img src="https://static.codia.ai/image/2025-12-09/UMuZahHj79.png" alt="Arrow" class="dropdown-arrow">
             </li>
-            <li><a href="contact.html" class="nav-link">Kontakt</a></li>
+            <li><a href="contact.html" class="nav-link active">Kontakt</a></li>
             <li><a href="vas-kutak.html" class="nav-link">Vaš kutak</a></li>
           </ul>
 
@@ -89,19 +117,19 @@
               <label for="name">Ime i prezime *</label>
               <input type="text" id="name" name="name" required>
             </div>
-            
+
             <div class="form-row">
               <div class="form-group">
                 <label for="email">Email adresa *</label>
                 <input type="email" id="email" name="email" required>
               </div>
-              
+
               <div class="form-group">
                 <label for="phone">Broj telefona *</label>
                 <input type="tel" id="phone" name="phone" required>
               </div>
             </div>
-            
+
             <div class="form-group">
               <label for="service">Usluga koja vas zanima</label>
               <select id="service" name="service">
@@ -115,70 +143,71 @@
                 <option value="pregled">Opći pregled</option>
               </select>
             </div>
-            
+
             <div class="form-group">
               <label for="message">Poruka *</label>
               <textarea id="message" name="message" rows="6" required></textarea>
             </div>
-            
+
             <div class="form-checkbox">
               <input type="checkbox" id="privacy" name="privacy" required>
               <label for="privacy">Slažem se s pravilima privatnosti *</label>
             </div>
-            
-            <button type="submit" class="btn-primary">
+
+            <button type="submit" class="btn-contact">
               <span>Pošaljite poruku</span>
+              <img src="https://static.codia.ai/image/2025-12-09/gyqTQ7bPdd.png" alt="Arrow">
             </button>
           </form>
         </div>
-        
+
         <div class="contact-info-sidebar">
           <h3>Informacije za kontakt</h3>
-          
+
           <div class="contact-item-i">
             <div class="contact-icon-i">
               <i class="bi bi-telephone"></i>
             </div>
-            <div class="contact-details">
+            <div class="contact-details-i">
               <h4>Telefon</h4>
               <p>+385 1 2910 428 </p>
               <p>+385 91 2910 418</p>
             </div>
           </div>
-          
+
           <div class="contact-item-i">
             <div class="contact-icon-i">
               <i class="bi bi-envelope"></i>
             </div>
-            <div class="contact-details">
+            <div class="contact-details-i">
               <h4>Email</h4>
               <p>dentalcentardubrava@gmail.com</p>
             </div>
           </div>
-          
+
           <div class="contact-item-i">
             <div class="contact-icon-i">
               <i class="bi bi-geo-alt"></i>
             </div>
-            <div class="contact-details">
+            <div class="contact-details-i">
               <h4 id="location">Adresa</h4>
               <p>Dubrava 41, 10040 Zagreb</p>
               <p>Hrvatska</p>
             </div>
           </div>
-          
+
           <div class="contact-item-i">
             <div class="contact-icon-i">
               <i class="bi bi-clock"></i>
             </div>
-            <div class="contact-details">
+            <div class="contact-details-i">
               <h4>Radno vrijeme</h4>
               <p>Ponedjeljak - Petak: 8:00 - 20:00</p>
               <p>Subota: 8:00 - 14:00</p>
               <p>Nedjelja: zatvoreno</p>
             </div>
           </div>
-       
+
         </div>
       </div>
     </div>
@@ -195,12 +224,12 @@
           <div class="footer-column">
             <h3>Usluge</h3>
             <ul>
-              <li><a href="services.html#implantati">Implantati</a></li>
-              <li><a href="services.html#protetika">Protetika</a></li>
-              <li><a href="services.html#izbjeljivanje">Izbjeljivanje</a></li>
-              <li><a href="services.html#ljuskice">Ljuskice</a></li>
-              <li><a href="services.html#kirurgija">Oralna kirurgija</a></li>
-              <li><a href="services.html#parodontologija">Parodontologija</a></li>
+              <li><a href="implantati.html">Implantati</a></li>
+              <li><a href="protetika.html">Protetika</a></li>
+              <li><a href="izbjeljivanje.html">Izbjeljivanje</a></li>
+              <li><a href="ljuskice.html">Ljuskice</a></li>
+              <li><a href="oralna-kirurgija.html">Oralna kirurgija</a></li>
+              <li><a href="parodontologija.html">Parodontologija</a></li>
             </ul>
           </div>
 
@@ -249,7 +278,9 @@
     </div>
   </footer>
 
-  <script src="./navigation.js"></script>
-  <script src="./contact-form.js"></script>
+  <!-- Use root script.js for correct functionality -->
+  <script src="../script.js"></script>
+  <!-- <script src="../js/contact-form.js"></script> -->
 </body>
+
 </html>

@@ -16,6 +16,9 @@
     integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles/styles-all.css">
+  <!-- Mobile Styles last to override -->
+  <link rel="stylesheet" href="./styles/styles-mobile.css">
 </head>
 
 <body>
@@ -25,7 +28,6 @@
       <div class="container">
         <div class="contact-info">
           <div class="contact-item">
-
             <div class="contact-details">
               <div class="spans">
                 <img src="https://static.codia.ai/image/2025-12-09/Ew3xgnZ6Nu.png" alt="Phone" class="contact-icon">
@@ -35,7 +37,6 @@
             </div>
           </div>
           <div class="contact-item">
-
             <div class="contact-details">
               <div class="spans">
                 <img src="https://static.codia.ai/image/2025-12-09/PHrdysQJWT.png" alt="Email" class="contact-icon">
@@ -55,19 +56,37 @@
             <img src="https://static.codia.ai/image/2025-12-09/BAkdEmcQsD.png" alt="Dental Centar Dubrava Logo">
           </div>
 
-          <!-- In the header section, update nav-menu -->
+          <div class="hamburger-menu">
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
           <ul class="nav-menu">
-            <li><a href="index.html" class="nav-link">Početna</a></li>
-            <li class="nav-dropdown">
-              <a href="services.html" class="nav-link">Usluge</a>
-              <img src="https://static.codia.ai/image/2025-12-09/jUUumSHjOB.png" alt="Arrow" class="dropdown-arrow">
+            <li><a href="/index.html" class="nav-link">Početna</a></li>
+            <li class="nav-item">
+              <div class="mobile-dropdown-header">
+                <a href="./pages/services.html" class="nav-link">Usluge</a>
+                <span class="dropdown-toggle-btn">
+                  <i class="bi bi-chevron-down dropdown-arrow-icon"></i>
+                </span>
+              </div>
+              <ul class="dropdown-menu">
+                <li><a href="./pages/implantati.html">Implantati</a></li>
+                <li><a href="./pages/protetika.html">Protetika</a></li>
+                <li><a href="./pages/izbjeljivanje.html">Izbjeljivanje</a></li>
+                <li><a href="./pages/ljuskice.html">Ljuskice</a></li>
+                <li><a href="./pages/oralna-kirurgija.html">Oralna kirurgija</a></li>
+                <li><a href="./pages/parodontologija.html">Parodontologija</a></li>
+              </ul>
             </li>
-            <li class="nav-dropdown">
-              <a href="about.html" class="nav-link">O nama</a>
-              <img src="https://static.codia.ai/image/2025-12-09/UMuZahHj79.png" alt="Arrow" class="dropdown-arrow">
+            <li class="nav-item">
+              <a href="./pages/about.html" class="nav-link">O nama</a>
             </li>
-            <li><a href="contact.html" class="nav-link">Kontakt</a></li>
-            <li><a href="vas-kutak.html" class="nav-link">Vaš kutak</a></li>
+            <li><a href="./pages/contact.html" class="nav-link">Kontakt</a></li>
+            <li><a href="./pages/vas-kutak.html" class="nav-link">Vaš kutak</a></li>
           </ul>
 
           <div class="cta-button">
@@ -84,7 +103,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-background">
-      <img src="./hero-bg.png" alt="Dental Office" class="hero-bg-image">
+      <img src="./images/hero-bg.png" alt="Dental Office" class="hero-bg-image">
     </div>
     <div class="container">
       <div class="hero-content">
@@ -98,11 +117,11 @@
           <div class="hero-buttons">
             <button class="btn-primary">
               <span>Zatražite termin</span>
-              <img src="https://static.codia.ai/image/2025-12-09/8QtyCq3WFe.png" alt="Arrow">
+              <img src="https://static.codia.ai/image/2025-12-09/gyqTQ7bPdd.png" alt="Arrow">
             </button>
             <button class="btn-secondary">
               <span>Pogledajte naše usluge</span>
-              <img src="https://static.codia.ai/image/2025-12-09/oiR2mX9840.png" alt="Arrow">
+              <img src="https://static.codia.ai/image/2025-12-09/gyqTQ7bPdd.png" alt="Arrow">
             </button>
           </div>
         </div>
@@ -164,7 +183,7 @@
               </defs>
             </svg>
           </div>
-          <img src="./hero-second.png" alt="" class="mask-img">
+          <img src="./images/hero-second.png" alt="" class="mask-img">
         </div>
 
       </div>
@@ -211,7 +230,7 @@
       </div>
 
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card" onclick="window.location.href='implantati.html'">
           <div class="service-image">
             <img src="https://static.codia.ai/image/2025-12-09/JkDkGoQDLk.png" alt="Implantati">
           </div>
@@ -222,7 +241,7 @@
           </div>
         </div>
 
-        <div class="service-card">
+        <div class="service-card" onclick="window.location.href='protetika.html'">
           <div class="service-image">
             <img src="https://static.codia.ai/image/2025-12-09/FWEsWSoWQ5.png" alt="Protetika">
           </div>
@@ -233,7 +252,7 @@
           </div>
         </div>
 
-        <div class="service-card">
+        <div class="service-card" onclick="window.location.href='izbjeljivanje.html'">
           <div class="service-image">
             <img src="https://static.codia.ai/image/2025-12-09/OAEN6NQHsn.png" alt="Izbjeljivanje">
           </div>
@@ -244,7 +263,7 @@
           </div>
         </div>
 
-        <div class="service-card">
+        <div class="service-card" onclick="window.location.href='ljuskice.html'">
           <div class="service-image">
             <img src="https://static.codia.ai/image/2025-12-09/yN7pDazxBT.png" alt="Ljuskice">
           </div>
@@ -255,7 +274,7 @@
           </div>
         </div>
 
-        <div class="service-card">
+        <div class="service-card" onclick="window.location.href='oralna-kirurgija.html'">
           <div class="service-image">
             <img src="https://static.codia.ai/image/2025-12-09/Pv0tN6ZZEw.png" alt="Oralna kirurgija">
           </div>
@@ -266,7 +285,7 @@
           </div>
         </div>
 
-        <div class="service-card">
+        <div class="service-card" onclick="window.location.href='parodontologija.html'">
           <div class="service-image">
             <img src="https://static.codia.ai/image/2025-12-09/00oGRoEo10.png" alt="Parodontologija">
           </div>
@@ -443,12 +462,12 @@
           <div class="footer-column">
             <h3>Usluge</h3>
             <ul>
-              <li><a href="#">Implantati</a></li>
-              <li><a href="#">Protetika</a></li>
-              <li><a href="#">Izbjeljivanje</a></li>
-              <li><a href="#">Ljuskice</a></li>
-              <li><a href="#">Oralna kirurgija</a></li>
-              <li><a href="#">Parodontologija</a></li>
+              <li><a href="implantati.html">Implantati</a></li>
+              <li><a href="protetika.html">Protetika</a></li>
+              <li><a href="izbjeljivanje.html">Izbjeljivanje</a></li>
+              <li><a href="ljuskice.html">Ljuskice</a></li>
+              <li><a href="oralna-kirurgija.html">Oralna kirurgija</a></li>
+              <li><a href="parodontologija.html">Parodontologija</a></li>
             </ul>
           </div>
 

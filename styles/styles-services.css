@@ -9,7 +9,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   /* max-width: 1200px; */
-  padding : 0 80px;
+  padding: 0 80px;
   margin: 0 auto;
 }
 
@@ -23,6 +23,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .service-card:hover {
@@ -30,35 +31,34 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
+/* Increased size for accessibility and aesthetics */
 .service-icon {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   background: linear-gradient(135deg, #294295, #4CC7DD);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 25px;
-  /* border: 2px solid red; */
 }
 
 .service-icon img {
-  /* width: 35px; */
   border-radius: 50%;
-  width: 85px;
-  height: 85px;
+  width: 125px;
+  height: 125px;
   overflow: hidden;
 }
 
 .service-card h3 {
-  font-size: 24px;
+  font-size: 28px;
   color: #294295;
   margin-bottom: 15px;
   font-weight: 600;
 }
 
 .service-description {
-  font-size: 16px;
+  font-size: 26px;
   color: #666;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -79,7 +79,7 @@
   color: #4CC7DD;
   padding: 6px 15px;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -89,7 +89,7 @@
   border: none;
   border-radius: 50px;
   padding: 12px 30px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -117,7 +117,7 @@
 }
 
 .cta-content p {
-  font-size: 18px;
+  font-size: 20px;
   opacity: 0.9;
   margin-bottom: 40px;
   max-width: 600px;
@@ -150,7 +150,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  
+
   .service-card {
     padding: 30px 25px;
   }
@@ -162,28 +162,28 @@
     gap: 25px;
     max-width: 500px;
   }
-  
+
   .cta-content h2 {
     font-size: 32px;
   }
-  
+
   .service-card {
     padding: 30px 20px;
   }
-  
+
   .service-icon {
     width: 70px;
     height: 70px;
   }
-  
+
   .service-icon i {
     font-size: 30px;
   }
-  
+
   .service-card h3 {
     font-size: 22px;
   }
-  
+
   .service-description {
     font-size: 15px;
   }
@@ -193,19 +193,20 @@
   .cta-content h2 {
     font-size: 28px;
   }
-  
+
   .cta-content p {
     font-size: 16px;
   }
-  
+
   .service-features {
     flex-direction: column;
     align-items: center;
   }
 }
-@media(max-width: 1000px){
-  .services-grid{
-padding : 0 20px;
+
+@media(max-width: 1000px) {
+  .services-grid {
+    padding: 0 20px;
   }
-  
+
 }
