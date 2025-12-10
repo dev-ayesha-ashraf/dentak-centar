@@ -368,5 +368,8 @@
   .featured-grid{
     padding : 0 20px;
   }
-
+  .service-icon img{
+    width: 90px !important;
+    height: 90px !important;
+  }
 }
