@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   dropdownToggles.forEach(toggle => {
     toggle.addEventListener('click', function (e) {
       e.preventDefault();
-      e.stopPropagation(); // Prevent bubbling
+      e.stopPropagation(); 
 
       const dropdownMenu = this.closest('.nav-item').querySelector('.dropdown-menu');
       const arrow = this.querySelector('.dropdown-arrow-icon');
@@ -279,6 +279,52 @@ document.addEventListener('DOMContentLoaded', function () {
   }, 10);
 
   window.addEventListener('scroll', debouncedScrollHandler);
+
+  // Hero SVG Arrow Scroll Functionality
+  const heroSvg = document.querySelector('.hero-svg svg');
+
+  if (heroSvg) {
+    // Get the arrow button groups (the g elements with data-figma-bg-blur-radius)
+    const arrowGroups = heroSvg.querySelectorAll('g[data-figma-bg-blur-radius]');
+
+    if (arrowGroups.length >= 2) {
+      // First arrow group (top one) - scrolls to top
+      arrowGroups[1].addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+        // Add slower custom scroll for better control
+        const scrollDuration = 1200; // 2 seconds
+        const scrollStep = -window.scrollY / (scrollDuration / 15);
+        const scrollInterval = setInterval(function () {
+          if (window.scrollY !== 0) {
+            window.scrollBy(0, scrollStep);
+          } else {
+            clearInterval(scrollInterval);
+          }
+        }, 15);
+      });
+
+      // Second arrow group (bottom one) - scrolls to bottom
+      arrowGroups[0].addEventListener('click', function () {
+        const scrollDuration = 1200; // 2 seconds
+        const targetY = document.documentElement.scrollHeight - window.innerHeight;
+        const startY = window.scrollY;
+        const distance = targetY - startY;
+        const scrollStep = distance / (scrollDuration / 15);
+
+        const scrollInterval = setInterval(function () {
+          if (Math.abs(window.scrollY - targetY) > Math.abs(scrollStep)) {
+            window.scrollBy(0, scrollStep);
+          } else {
+            window.scrollTo(0, targetY);
+            clearInterval(scrollInterval);
+          }
+        }, 15);
+      });
+    }
+  }
 });
 
 // Additional CSS for animations

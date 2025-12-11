@@ -1376,3 +1376,73 @@ body {
     text-align: center;
   }
 }
+
+/* Hero SVG Button Animations */
+.hero-svg {
+  cursor: pointer;
+}
+
+/* Interactive circles */
+.hero-svg g[data-figma-bg-blur-radius] {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.hero-svg g[data-figma-bg-blur-radius]:hover circle:first-child {
+  fill-opacity: 0.08;
+}
+
+.hero-svg g[data-figma-bg-blur-radius]:hover circle:last-child {
+  stroke-opacity: 0.8;
+}
+
+
+/* Pulse animation for attention */
+@keyframes pulseArrow {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero-svg .arrow-pulse {
+  animation: pulseArrow 2s infinite;
+}
+
+@keyframes smooth-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Apply animation to the groups */
+.bounce-circle {
+  animation: smooth-bounce 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Optional: stagger animation for nicer effect */
+.circle-1 {
+  animation-delay: 0s;
+}
+.circle-2 {
+  animation-delay: 0.2s;
+}
+.circle-3 {
+  animation-delay: 0.4s;
+}
+.circle-4 {
+  animation-delay: 0.6s;
+}
+
