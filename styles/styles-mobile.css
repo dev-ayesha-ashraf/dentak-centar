@@ -113,18 +113,13 @@
     /* Prevent scrolling background */
   }
 
+
+  /* Hide desktop CTA button on mobile */
   .cta-button {
-    order: 2;
-    /* Center */
-    display: block !important;
-    margin: 0;
-    position: relative;
-    z-index: 100;
-    /* Below overlay */
-    transform: none !important;
+    display: none !important;
   }
 
-  /* Hide CTA when menu open */
+  /* Hide CTA when menu open (redundant but kept for safety) */
   body.menu-open .cta-button {
     display: none !important;
   }
@@ -322,10 +317,45 @@
     display: none !important;
   }
 
+  /* Hide mobile contact button on desktop */
+  .mobile-contact-btn {
+    display: none;
+  }
+
   .dropdown-arrow-icon {
     color: #4CC7DD;
     margin-right: 10px;
     font-size: 18px;
+  }
+
+  /* Mobile Contact Button Styling */
+  .mobile-contact-btn {
+    display: block !important;
+    margin-top: 30px;
+    padding: 0 30px;
+  }
+
+  .mobile-contact-btn .nav-link {
+    background: #A89C8C;
+    border-radius: 50px;
+    padding: 15px 25px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 22px !important;
+    box-shadow: 0 4px 15px rgba(168, 156, 140, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .mobile-contact-btn .nav-link:hover {
+    background: #968A7D;
+    transform: translateY(-2px);
+  }
+
+  .mobile-contact-btn img {
+    width: 24px;
+    height: 24px;
   }
 }
 
