@@ -334,16 +334,7 @@ const additionalStyles = `
     transform: translateY(0);
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
-  
-  .header.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-  }
-  
-  .header.hidden {
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
-  }
+
   
   .keyboard-navigation *:focus {
     outline: 2px solid #4CC7DD;
