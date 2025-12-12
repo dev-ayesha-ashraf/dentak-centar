@@ -1,6 +1,5 @@
 @import url('styles-dropdown.css');
 
-/* Common styles for all pages */
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +19,6 @@ body {
   padding: 0 20px;
 }
 
-/* Header Styles (same for all pages) */
 .header {
   display: flex;
   flex-direction: column;
@@ -74,8 +72,6 @@ body {
   color: #FFFFFF;
   letter-spacing: 0.9px;
 }
-
-/* Desktop: icon-link should not be styled as button */
 .contact-icon-link {
   display: contents;
 }
@@ -122,7 +118,6 @@ body {
 .nav-link {
   text-decoration: none;
   font-size: 19px;
-  /* User requested 18px-20px */
   color: #000000;
   font-weight: 300;
   transition: color 0.3s ease;
@@ -146,7 +141,6 @@ body {
   position: relative;
 }
 
-/* Hide mobile contact button on desktop */
 .mobile-contact-btn {
   display: none;
 }
@@ -175,7 +169,6 @@ body {
   height: 39px;
 }
 
-/* Common Section Styles */
 .section-header {
   margin-bottom: 5px;
   display: flex;
@@ -220,7 +213,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Page Hero Banner */
 .page-hero {
   background: linear-gradient(135deg, #294295 0%, #4CC7DD 100%);
   padding: 120px 0 80px;
@@ -242,10 +234,8 @@ body {
   margin: 0 auto;
 }
 
-/* Modern Footer Styles */
 .footer {
   background: #f8fcfd;
-  /* Very subtle cyan tint or keep white/light grey */
   padding: 25px 0 25px;
   border-top: 1px solid rgba(76, 199, 221, 0.1);
 }
@@ -282,7 +272,6 @@ body {
   display: inline-block;
 }
 
-/* Optional decorative underline for headers */
 .footer-column h3::after {
   content: '';
   position: absolute;
@@ -310,7 +299,6 @@ body {
   line-height: 1.6;
   transition: all 0.3s ease;
   font-size: 22px;
-  /* Increased font size */
   display: inline-block;
 }
 
@@ -337,7 +325,6 @@ body {
   align-items: center;
   padding: 30px 40px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
-  /* Softer border */
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -379,6 +366,8 @@ body {
 .footer-social i {
   font-size: 20px;
   margin-top: -10px;
+   width: 20px;
+  height: 20px;
 }
 
 .footer-links {
@@ -400,7 +389,6 @@ body {
 
 .footer-links span {
   display: none;
-  /* Hide separator if using gap */
 }
 
 @media(max-width: 1000px) {
@@ -423,13 +411,11 @@ body {
   }
 }
 
-/* Responsive Styles */
 @media (max-width: 1200px) {
   .footer-content {
     padding: 0 60px;
     gap: 50px;
     grid-template-columns: repeat(2, 1fr);
-    /* 2 columns on tablet */
   }
 
   .footer-bottom {
@@ -444,7 +430,6 @@ body {
 
   .footer-content {
     grid-template-columns: 1fr;
-    /* 1 column on mobile */
     text-align: center;
     padding: 0 30px;
     gap: 40px;
@@ -468,25 +453,17 @@ body {
   }
 }
 
-/* Add these responsive styles to styles-all.css */
-
-/* RESPONSIVE STYLES - Only for smaller screens */
-/* Removed 1800px query to match index.html alignment */
-
-/* Removed 1200px query to match index.html alignment */
-
 @media (max-width: 1000px) {
   body {
     zoom: 0.7;
   }
 
-  /* Hide header-top completely on mobile */
   .header-top {
     display: none !important;
   }
 
   .navbar {
-    width: 95% !important;
+    width: 100% !important;
     margin-top: 0px !important;
     min-height: 90px !important;
     padding: 10px 20px !important;
@@ -498,7 +475,6 @@ body {
     gap: 40px !important;
   }
 
-  /* Adjust page hero margin for mobile */
   .page-hero {
     margin-top: 0 !important;
     padding-top: 140px !important;

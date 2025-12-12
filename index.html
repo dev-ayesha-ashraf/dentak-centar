@@ -17,8 +17,11 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./styles/styles-all.css">
-  <!-- Mobile Styles last to override -->
   <link rel="stylesheet" href="./styles/styles-mobile.css">
+  <style>
+
+
+  </style>
 </head>
 
 <body>
@@ -135,36 +138,32 @@
             </button>
           </div>
         </div>
-        <div class="hero-sub">
-          <div class="hero-svg">
-            <div class="hero-svg">
-              <svg width="66" height="500" viewBox="0 0 66 462" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-                <!-- Group the top elements together for unified bouncing -->
-                <g class="bounce-circle circle-1">
-                  <!-- Top big rounded square -->
-                  <rect width="40" height="40" rx="20" transform="matrix(-1 0 0 1 52.7917 0)" fill="white"
-                    fill-opacity="0.25"></rect>
+        <div class="hero-carousel-container">
+          <div class="hero-svg-navigation">
+            <svg width="66" height="462" viewBox="0 0 66 462" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g class="nav-circle active" data-slide="0">
+                <rect width="40" height="40" rx="20" transform="matrix(-1 0 0 1 52.7917 0)" fill="white"
+                  fill-opacity="0.25"></rect>
+                <circle cx="20" cy="20" r="14" transform="matrix(-1 0 0 1 52.7917 0)" fill="#4CC7DD"></circle>
+              </g>
 
-                  <!-- Blue circle -->
-                  <circle cx="14" cy="14" r="14" transform="matrix(-1 0 0 1 46.7917 6)" fill="#4CC7DD"></circle>
-                </g>
+              <g class="nav-circle" data-slide="1">
+                <circle cx="20" cy="20" r="10" transform="matrix(-1 0 0 1 52.7917 74)" fill="white" fill-opacity="0.4">
+                </circle>
+              </g>
 
-                <!-- Other circles (keep them separate since they don't have backgrounds) -->
-                <g class="bounce-circle circle-2">
-                  <circle cx="10" cy="10" r="10" transform="matrix(-1 0 0 1 42.7917 74)" fill="white"
-                    fill-opacity="0.4"></circle>
-                </g>
+              <g class="nav-circle" data-slide="2">
+                <circle cx="20" cy="20" r="7.5" transform="matrix(-1 0 0 1 52.7917 128)" fill="white"
+                  fill-opacity="0.3"></circle>
+              </g>
 
-                <g class="bounce-circle circle-3">
-                  <circle cx="7.5" cy="7.5" r="7.5" transform="matrix(-1 0 0 1 40.2917 128)" fill="white"
-                    fill-opacity="0.3"></circle>
-                </g>
+              <g class="nav-circle" data-slide="3">
+                <circle cx="20" cy="20" r="5" transform="matrix(-1 0 0 1 52.7917 177)" fill="white" fill-opacity="0.3">
+                </circle>
+              </g>
 
-                <g class="bounce-circle circle-4">
-                  <circle cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 37.7917 177)" fill="white" fill-opacity="0.3">
-                  </circle>
-                </g>
+              <g class="nav-arrow nav-arrow-up" data-direction="up">
                 <foreignObject x="-37.4926" y="358.925" width="140.568" height="140.568">
                   <div xmlns="http://www.w3.org/1999/xhtml"
                     style="backdrop-filter:blur(18.75px);clip-path:url(#bgblur_0_9_2_clip_path);height:100%;width:100%">
@@ -173,15 +172,14 @@
                 <g data-figma-bg-blur-radius="37.4927">
                   <circle cx="32.7915" cy="429.209" r="32.7914" fill="white" fill-opacity="0.04"></circle>
                   <circle cx="32.7915" cy="429.209" r="32.1042" stroke="white" stroke-opacity="0.6"
-                    stroke-width="1.37451">
-                  </circle>
+                    stroke-width="1.37451"></circle>
                 </g>
                 <path
                   d="M25.9865 423.706L32.7914 430.511L39.5963 423.706L41.6964 425.806L32.7914 434.711L23.8864 425.806L25.9865 423.706Z"
                   fill="white"></path>
-                <path
-                  d="M40.7243 425.806L32.7907 433.739L24.8581 425.806L25.986 424.678L32.3053 430.997L32.7917 431.482L39.5963 424.678L40.7243 425.806Z"
-                  stroke="white" stroke-opacity="0.6" stroke-width="1.37451"></path>
+              </g>
+
+              <g class="nav-arrow nav-arrow-down" data-direction="down">
                 <foreignObject x="-37.4922" y="274.507" width="140.568" height="140.568">
                   <div xmlns="http://www.w3.org/1999/xhtml"
                     style="backdrop-filter:blur(18.75px);clip-path:url(#bgblur_1_9_2_clip_path);height:100%;width:100%">
@@ -196,24 +194,54 @@
                 <path
                   d="M39.5957 350.294L32.7908 343.489L25.9859 350.294L23.8858 348.194L32.7908 339.289L41.6958 348.194L39.5957 350.294Z"
                   fill="white"></path>
-                <path
-                  d="M24.8579 348.194L32.7915 340.261L40.7242 348.194L39.5962 349.322L33.2769 343.003L32.7906 342.518L25.9859 349.322L24.8579 348.194Z"
-                  stroke="white" stroke-opacity="0.6" stroke-width="1.37451"></path>
-                <defs>
-                  <clipPath id="bgblur_0_9_2_clip_path" transform="translate(37.4926 -358.925)">
-                    <circle cx="32.7915" cy="429.209" r="32.7914"></circle>
-                  </clipPath>
-                  <clipPath id="bgblur_1_9_2_clip_path" transform="translate(37.4922 -274.507)">
-                    <circle cx="32.792" cy="344.792" r="32.7914" transform="rotate(180 32.792 344.792)"></circle>
-                  </clipPath>
-                </defs>
-              </svg>
-            </div>
-            <img src="./images/hero-second.png" alt="" class="mask-img">
+              </g>
+
+              <defs>
+                <clipPath id="bgblur_0_9_2_clip_path" transform="translate(37.4926 -358.925)">
+                  <circle cx="32.7915" cy="429.209" r="32.7914"></circle>
+                </clipPath>
+                <clipPath id="bgblur_1_9_2_clip_path" transform="translate(37.4922 -274.507)">
+                  <circle cx="32.792" cy="344.792" r="32.7914" transform="rotate(180 32.792 344.792)"></circle>
+                </clipPath>
+              </defs>
+            </svg>
           </div>
 
+          <!-- Carousel -->
+          <div class="hero-carousel">
+            <div class="carousel-track">
+               <!-- Slide 1 -->
+              <div class="carousel-slide">
+                <img
+                  src="./images/hero-second.png"
+                  alt="Dental team" class="carousel-image">
+              </div>
+             
+              <!-- Slide 2 -->
+              <div class="carousel-slide">
+                <img
+                  src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                  alt="Dental equipment" class="carousel-image">
+              </div>
+              
+              <!-- Slide 3 -->
+              <div class="carousel-slide">
+                <img
+                  src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                  alt="Dental clinic interior" class="carousel-image">
+              </div>
+              <!-- Slide 4 -->
+              <div class="carousel-slide">
+                <img
+                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                  alt="Modern dental office" class="carousel-image">
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
+    </div>
   </section>
 
   <!-- About Section -->
@@ -541,7 +569,204 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Carousel elements
+      const carouselTrack = document.querySelector('.carousel-track');
+      const slides = document.querySelectorAll('.carousel-slide');
+      const circles = document.querySelectorAll('.nav-circle');
+      const navArrows = document.querySelectorAll('.nav-arrow');
 
+      // Carousel state
+      let currentSlide = 0;
+      const totalSlides = slides.length;
+      let autoRotateInterval;
+
+      // Initialize carousel
+      function initCarousel() {
+        // Set initial position
+        updateCarouselPosition();
+        updateActiveCircle();
+
+        // Add click handlers to circles
+        circles.forEach(circle => {
+          circle.addEventListener('click', function () {
+            const slideIndex = parseInt(this.getAttribute('data-slide'));
+            if (slideIndex !== currentSlide) {
+              goToSlide(slideIndex);
+            }
+          });
+        });
+
+        // Add click handlers to arrows
+        navArrows.forEach(arrow => {
+          arrow.addEventListener('click', function () {
+            const direction = this.getAttribute('data-direction');
+            if (direction === 'up') {
+              goToPrevSlide();
+            } else {
+              goToNextSlide();
+            }
+          });
+        });
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+            goToPrevSlide();
+          } else if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+            goToNextSlide();
+          }
+        });
+
+        // Start auto rotation
+        startAutoRotate();
+
+        // Pause auto rotation on hover
+        const carousel = document.querySelector('.hero-carousel');
+        const svgNavigation = document.querySelector('.hero-svg-navigation');
+
+        carousel.addEventListener('mouseenter', stopAutoRotate);
+        carousel.addEventListener('mouseleave', startAutoRotate);
+        svgNavigation.addEventListener('mouseenter', stopAutoRotate);
+        svgNavigation.addEventListener('mouseleave', startAutoRotate);
+
+        // Pause auto rotation on touch
+        carousel.addEventListener('touchstart', stopAutoRotate);
+        svgNavigation.addEventListener('touchstart', stopAutoRotate);
+
+        carousel.addEventListener('touchend', () => {
+          setTimeout(startAutoRotate, 5000);
+        });
+        svgNavigation.addEventListener('touchend', () => {
+          setTimeout(startAutoRotate, 5000);
+        });
+      }
+
+      // Go to specific slide
+      function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        updateCarouselPosition();
+        updateActiveCircle();
+      }
+
+      // Go to next slide
+      function goToNextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarouselPosition();
+        updateActiveCircle();
+      }
+
+      // Go to previous slide
+      function goToPrevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarouselPosition();
+        updateActiveCircle();
+      }
+
+      // Update carousel position
+      function updateCarouselPosition() {
+        const translateX = -(currentSlide * 100);
+        carouselTrack.style.transform = `translateX(${translateX}%)`;
+      }
+
+      // Update active circle styling
+      function updateActiveCircle() {
+        // Remove active class from all circles
+        circles.forEach(circle => {
+          circle.classList.remove('active');
+        });
+
+        // Add active class to current circle
+        circles[currentSlide].classList.add('active');
+
+        // Update all circles
+        circles.forEach((circle, index) => {
+          // Clear any existing rect element
+          const existingRect = circle.querySelector('rect');
+          if (existingRect) {
+            circle.removeChild(existingRect);
+          }
+
+          // Get the circle element
+          const circleElement = circle.querySelector('circle');
+
+          if (index === currentSlide) {
+            // Active circle: Add background rect and make circle blue
+            const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+            rect.setAttribute('width', '40');
+            rect.setAttribute('height', '40');
+            rect.setAttribute('rx', '20');
+            rect.setAttribute('fill', 'white');
+            rect.setAttribute('fill-opacity', '0.25');
+
+            // Position the rect based on which circle is active
+            let yPos;
+            if (index === 0) yPos = "0";
+            else if (index === 1) yPos = "74";
+            else if (index === 2) yPos = "128";
+            else if (index === 3) yPos = "177";
+
+            rect.setAttribute('transform', `matrix(-1 0 0 1 52.7917 ${yPos})`);
+
+            // Insert rect before the circle
+            circle.insertBefore(rect, circleElement);
+
+            // Update circle properties
+            circleElement.setAttribute('cx', '20');
+            circleElement.setAttribute('cy', '20');
+            circleElement.setAttribute('r', '14');
+            circleElement.setAttribute('fill', '#4CC7DD');
+            circleElement.setAttribute('fill-opacity', '1');
+            circleElement.setAttribute('transform', `matrix(-1 0 0 1 52.7917 ${yPos})`);
+          } else {
+            // Inactive circles: No background, white with specific opacity
+            let yPos, r, opacity;
+            if (index === 0) {
+              yPos = "0"; r = "14"; opacity = "0.4"; // CHANGED: First circle when inactive now has 40% opacity
+            } else if (index === 1) {
+              yPos = "74"; r = "10"; opacity = "0.4";
+            } else if (index === 2) {
+              yPos = "128"; r = "7.5"; opacity = "0.3";
+            } else if (index === 3) {
+              yPos = "177"; r = "5"; opacity = "0.3";
+            }
+
+            // Update circle properties
+            circleElement.setAttribute('cx', '20');
+            circleElement.setAttribute('cy', '20');
+            circleElement.setAttribute('r', r);
+            circleElement.setAttribute('fill', 'white');
+            circleElement.setAttribute('fill-opacity', opacity);
+            circleElement.setAttribute('transform', `matrix(-1 0 0 1 52.7917 ${yPos})`);
+          }
+        });
+      }
+
+      // Auto rotation functions
+      function startAutoRotate() {
+        stopAutoRotate(); // Clear any existing interval
+        autoRotateInterval = setInterval(() => {
+          goToNextSlide();
+        }, 5000);
+      }
+
+      function stopAutoRotate() {
+        if (autoRotateInterval) {
+          clearInterval(autoRotateInterval);
+          autoRotateInterval = null;
+        }
+      }
+
+      // Initialize the carousel
+      initCarousel();
+
+      // Handle window resize
+      window.addEventListener('resize', function () {
+        updateCarouselPosition();
+      });
+    });
+  </script>
   <script src="./script.js"></script>
 </body>
 

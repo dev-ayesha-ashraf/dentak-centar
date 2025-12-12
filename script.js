@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Mobile Dropdown Toggle
   const dropdownToggles = document.querySelectorAll('.dropdown-toggle-btn');
   dropdownToggles.forEach(toggle => {
     toggle.addEventListener('click', function (e) {
@@ -9,17 +8,14 @@ document.addEventListener('DOMContentLoaded', function () {
       const dropdownMenu = this.closest('.nav-item').querySelector('.dropdown-menu');
       const arrow = this.querySelector('.dropdown-arrow-icon');
 
-      // Toggle class logic
       const isOpen = dropdownMenu.classList.contains('show');
 
-      // Reset all others first
       document.querySelectorAll('.dropdown-menu').forEach(menu => {
         menu.classList.remove('show');
         const otherArrow = menu.closest('.nav-item').querySelector('.dropdown-arrow-icon');
         if (otherArrow) otherArrow.style.transform = 'rotate(0deg)';
       });
 
-      // If it wasn't open before, open it now.
       if (!isOpen) {
         dropdownMenu.classList.add('show');
         arrow.style.transform = 'rotate(180deg)';
@@ -27,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Close dropdown when clicking outside
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.nav-item')) {
       document.querySelectorAll('.dropdown-menu').forEach(menu => {
@@ -38,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
-  // Mobile menu toggle
   const mobileMenuBtn = document.querySelector('.hamburger-menu');
   const navMenu = document.querySelector('.nav-menu');
   const hamburgerIcon = document.querySelector('.hamburger-icon');
@@ -51,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Smooth scrolling for navigation links
   const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
     link.addEventListener('click', function (e) {
@@ -69,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Review carousel functionality
   const reviewCards = document.querySelectorAll('.review-card');
   const dots = document.querySelectorAll('.dot');
   const prevBtn = document.querySelector('.nav-btn.prev');
@@ -79,11 +71,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const totalReviews = reviewCards.length;
 
   function showReview(index) {
-    // Remove active class from all cards and dots
     reviewCards.forEach(card => card.classList.remove('featured'));
     dots.forEach(dot => dot.classList.remove('active'));
-
-    // Add active class to current card and dot
     if (reviewCards[index]) {
       reviewCards[index].classList.add('featured');
     }
@@ -101,8 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
     currentReview = (currentReview - 1 + totalReviews) % totalReviews;
     showReview(currentReview);
   }
-
-  // Event listeners for navigation buttons
   if (nextBtn) {
     nextBtn.addEventListener('click', nextReview);
   }
@@ -111,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
     prevBtn.addEventListener('click', prevReview);
   }
 
-  // Event listeners for dots
   dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
       currentReview = index;
@@ -119,16 +105,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Auto-play carousel
   setInterval(nextReview, 5000);
 
-  // Form validation and submission
   const contactForms = document.querySelectorAll('form');
   contactForms.forEach(form => {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-
-      // Basic form validation
       const inputs = form.querySelectorAll('input[required], textarea[required]');
       let isValid = true;
 
@@ -142,7 +124,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       if (isValid) {
-        // Simulate form submission
         alert('Hvala vam na poruci! Kontaktirat ćemo vas uskoro.');
         form.reset();
       } else {
@@ -151,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Scroll animations
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -165,13 +145,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, observerOptions);
 
-  // Observe elements for animation
   const animateElements = document.querySelectorAll('.service-card, .review-card, .about-text, .section-header');
   animateElements.forEach(el => {
     observer.observe(el);
   });
 
-  // Header scroll effect
   const header = document.querySelector('.header');
   let lastScrollTop = 0;
 
@@ -184,7 +162,6 @@ document.addEventListener('DOMContentLoaded', function () {
       header.classList.remove('scrolled');
     }
 
-    // Hide/show header on scroll
     if (scrollTop > lastScrollTop && scrollTop > 200) {
       header.classList.add('hidden');
     } else {
@@ -194,7 +171,6 @@ document.addEventListener('DOMContentLoaded', function () {
     lastScrollTop = scrollTop;
   });
 
-  // Service card hover effects
   const serviceCards = document.querySelectorAll('.service-card');
   serviceCards.forEach(card => {
     card.addEventListener('mouseenter', function () {
@@ -207,7 +183,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Button click effects
   const buttons = document.querySelectorAll('button');
   buttons.forEach(button => {
     button.addEventListener('click', function () {
@@ -218,13 +193,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Lazy loading for images
   const images = document.querySelectorAll('img');
   const imageObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target;
-        img.src = img.src; // Trigger loading
+        img.src = img.src; 
         img.classList.add('loaded');
         observer.unobserve(img);
       }
@@ -234,8 +208,6 @@ document.addEventListener('DOMContentLoaded', function () {
   images.forEach(img => {
     imageObserver.observe(img);
   });
-
-  // Contact form phone number formatting
   const phoneInputs = document.querySelectorAll('input[type="tel"]');
   phoneInputs.forEach(input => {
     input.addEventListener('input', function () {
@@ -248,8 +220,6 @@ document.addEventListener('DOMContentLoaded', function () {
       this.value = value;
     });
   });
-
-  // Accessibility improvements
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Tab') {
       document.body.classList.add('keyboard-navigation');
@@ -260,7 +230,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.classList.remove('keyboard-navigation');
   });
 
-  // Performance optimization - debounce scroll events
   function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -272,91 +241,9 @@ document.addEventListener('DOMContentLoaded', function () {
       timeout = setTimeout(later, wait);
     };
   }
-
-  // Apply debounce to scroll handler
   const debouncedScrollHandler = debounce(function () {
-    // Scroll-based animations or effects can go here
   }, 10);
 
   window.addEventListener('scroll', debouncedScrollHandler);
 
-  // Hero SVG Arrow Scroll Functionality
-  const heroSvg = document.querySelector('.hero-svg svg');
-
-  if (heroSvg) {
-    // Get the arrow button groups (the g elements with data-figma-bg-blur-radius)
-    const arrowGroups = heroSvg.querySelectorAll('g[data-figma-bg-blur-radius]');
-
-    if (arrowGroups.length >= 2) {
-      // First arrow group (top one) - scrolls to top
-      arrowGroups[1].addEventListener('click', function () {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-        // Add slower custom scroll for better control
-        const scrollDuration = 1200; // 2 seconds
-        const scrollStep = -window.scrollY / (scrollDuration / 15);
-        const scrollInterval = setInterval(function () {
-          if (window.scrollY !== 0) {
-            window.scrollBy(0, scrollStep);
-          } else {
-            clearInterval(scrollInterval);
-          }
-        }, 15);
-      });
-
-      // Second arrow group (bottom one) - scrolls to bottom
-      arrowGroups[0].addEventListener('click', function () {
-        const scrollDuration = 1200; // 2 seconds
-        const targetY = document.documentElement.scrollHeight - window.innerHeight;
-        const startY = window.scrollY;
-        const distance = targetY - startY;
-        const scrollStep = distance / (scrollDuration / 15);
-
-        const scrollInterval = setInterval(function () {
-          if (Math.abs(window.scrollY - targetY) > Math.abs(scrollStep)) {
-            window.scrollBy(0, scrollStep);
-          } else {
-            window.scrollTo(0, targetY);
-            clearInterval(scrollInterval);
-          }
-        }, 15);
-      });
-    }
-  }
 });
-
-// Additional CSS for animations
-const additionalStyles = `
-  .animate-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-
-  
-  .keyboard-navigation *:focus {
-    outline: 2px solid #4CC7DD;
-    outline-offset: 2px;
-  }
-  
-  img {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  img.loaded {
-    opacity: 1;
-  }
-  
-  .error {
-    border-color: #ff4444 !important;
-    box-shadow: 0 0 5px rgba(255, 68, 68, 0.3);
-  }
-`;
-
-// Inject additional styles
-const styleSheet = document.createElement('style');
-styleSheet.textContent = additionalStyles;
-document.head.appendChild(styleSheet);

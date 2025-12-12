@@ -19,21 +19,6 @@ body {
   padding: 0 20px;
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Original Desktop Styles (unchanged) */
-.header-top {
-  background-color: #294295;
-  padding: 15px 0;
-  width: 100%;
-  height: 142px;
-}
-
 .spans {
   display: flex;
 }
@@ -112,13 +97,6 @@ body {
   gap: 10px;
 }
 
-/* .nav-link {
-  text-decoration: none;
-  font-size: 20px;
-  color: #000000;
-  font-weight: 300;
-  transition: color 0.3s ease;
-} */
 
 .nav-link.active {
   color: #4CC7DD;
@@ -160,7 +138,75 @@ body {
   width: 39px;
   height: 39px;
 }
+    .hero-carousel-container {
+      position: relative;
+      width: 573px;
+      height: 659px;
+      display: flex;
+      align-items: center;
+    }
 
+    .hero-carousel {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      height: 100%;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    
+    .carousel-image {
+      width: 573px !important;
+      height: 659px !important;
+      object-fit: cover;
+      margin-top: 40px;
+    }
+
+    .hero-svg-navigation {
+      position: absolute;
+      left: -80px;
+      top: 65%;
+      transform: translateY(-50%);
+      height: 462px;
+      width: 66px;
+      z-index: 10;
+    }
+    .hero-svg-navigation svg {
+      height: 100%;
+      width: 100%;
+    }
+
+    .nav-circle {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .nav-circle:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-arrow {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .nav-arrow:hover circle:first-child {
+      fill-opacity: 0.08;
+    }
+
+    .nav-arrow:hover circle:last-child {
+      stroke-opacity: 0.8;
+    }
 /* Hero Section */
 .hero {
   min-height: 808px;
@@ -386,7 +432,6 @@ body {
 
 @import url('styles-dropdown.css');
 
-/* Services Section */
 .services {
   background: #294295;
   padding: 64px 0;
@@ -682,124 +727,6 @@ body {
   line-height: 20px;
   white-space: nowrap;
 }
-
-/* Footer */
-.footer {
-  background: rgba(76, 199, 221, 0.12);
-  padding: 38px 0;
-}
-
-.footer-logo {
-  text-align: center;
-  margin-bottom: 59px;
-}
-
-.footer-logo img {
-  width: 140px;
-  height: 111px;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 135px;
-  padding: 0 182px;
-  margin-bottom: 59px;
-}
-
-.footer-column h3 {
-  font-size: 24px;
-  color: #000000;
-  line-height: 32px;
-  margin-bottom: 24px;
-}
-
-.footer-column ul li {
-  margin-bottom: 16px;
-}
-
-.footer-column ul li a {
-  text-decoration: none;
-  font-weight: 300;
-  color: #656565;
-  line-height: 32px;
-  transition: color 0.3s ease;
-  font-size: 18px;
-}
-
-.footer-column ul li a:hover {
-  color: #4CC7DD;
-}
-
-.footer-map img {
-  width: 364px;
-  height: 314px;
-  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
-}
-
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 13px 188px;
-  border-top: 1px solid rgba(41, 66, 149, 0.3);
-}
-
-.footer-copyright p {
-  font-size: 18px;
-  color: #000000;
-  line-height: 24px;
-}
-
-.footer-social {
-  display: flex;
-  gap: 10px;
-}
-
-.footer-social a {
-  width: 38px;
-  height: 38px;
-  border: 1.5px solid #294295;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.footer-social i {
-  width: 20px;
-  height: 20px;
-  color: #294295;
-}
-
-.footer-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.footer-links a {
-  text-decoration: none;
-  font-size: 22px;
-  color: #000000;
-  line-height: 24px;
-  text-transform: capitalize;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #4CC7DD;
-}
-
-.footer-links span {
-  font-family: 'Archivo', sans-serif;
-  font-size: 16px;
-  color: rgba(41, 66, 149, 0.6);
-}
-
-/* RESPONSIVE STYLES - Only for smaller screens */
 @media (max-width: 1800px) {
   .hero-content {
     padding: 0 100px !important;
@@ -939,31 +866,6 @@ body {
 @media (max-width: 1000px) {
   body {
     zoom: 0.7;
-    /* Slightly adjust zoom for better mobile viewing */
-  }
-
-  .header-top {
-    padding: 10px 0 !important;
-    height: auto !important;
-  }
-
-  .contact-info {
-    flex-direction: column;
-    align-items: flex-start !important;
-    padding-left: 30px !important;
-    gap: 20px !important;
-  }
-
-  .navbar {
-    width: 95% !important;
-    margin-top: -30px !important;
-    height: auto !important;
-    min-height: 90px !important;
-    padding: 10px 20px !important;
-  }
-
-  .nav-menu {
-    gap: 40px !important;
   }
 
   .hero {
@@ -1077,7 +979,6 @@ body {
 @media (max-width: 768px) {
   body {
     zoom: 0.75;
-    /* Further adjust for smaller screens */
   }
 
   .container {
@@ -1086,13 +987,6 @@ body {
 
   .contact-info {
     padding-left: 20px !important;
-  }
-
-  .navbar {
-    width: 100% !important;
-    border-radius: 0 !important;
-    margin-top: 0 !important;
-    padding: 15px !important;
   }
 
   .nav-content {
@@ -1201,7 +1095,6 @@ body {
 @media (max-width: 480px) {
   body {
     zoom: 0.8;
-    /* Adjust zoom for very small screens */
   }
 
   .hero-title {
@@ -1377,18 +1270,15 @@ body {
   }
 }
 
-/* Hero SVG Button Animations */
 .hero-svg {
   cursor: pointer;
 }
 
-/* Interactive circles */
 .hero-svg g[data-figma-bg-blur-radius] {
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-/* Hover effect */
 .hero-svg g[data-figma-bg-blur-radius]:hover circle:first-child {
   fill-opacity: 0.08;
 }
@@ -1397,52 +1287,8 @@ body {
   stroke-opacity: 0.8;
 }
 
-
-/* Pulse animation for attention */
-@keyframes pulseArrow {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.05);
-  }
-
-  100% {
-    transform: scale(1);
+@media(max-width:1000px){
+  .hero-carousel-container{
+    display: none;
   }
 }
-
-.hero-svg .arrow-pulse {
-  animation: pulseArrow 2s infinite;
-}
-
-@keyframes smooth-bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-/* Apply animation to the groups */
-.bounce-circle {
-  animation: smooth-bounce 2s ease-in-out infinite;
-  transform-origin: center;
-}
-
-/* Optional: stagger animation for nicer effect */
-.circle-1 {
-  animation-delay: 0s;
-}
-.circle-2 {
-  animation-delay: 0.2s;
-}
-.circle-3 {
-  animation-delay: 0.4s;
-}
-.circle-4 {
-  animation-delay: 0.6s;
-}
-

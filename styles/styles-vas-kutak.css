@@ -1,4 +1,4 @@
-/* Simple Content Section - IMPROVED VERSION */
+
 .simple-content {
   padding: 80px 0;
   background: white;
@@ -23,17 +23,13 @@
   color: #535353;
   line-height: 28px;
   text-align: left;
-  /* Changed from justify for better readability */
 }
 
 .content-paragraphs p {
   margin-bottom: 35px;
-  /* Increased from 25px */
   padding: 0 10px;
-  /* Added side padding */
 }
 
-/* Add visual separation between paragraphs */
 .content-paragraphs p:not(:last-child) {
   border-bottom: 1px solid rgba(41, 66, 149, 0.05);
   padding-bottom: 35px;
@@ -43,9 +39,7 @@
   background: rgba(76, 199, 221, 0.1);
   border-left: 4px solid #4CC7DD;
   padding: 30px;
-  /* Increased from 25px */
   margin: 50px 10px 0 10px;
-  /* Added horizontal margin */
   border-radius: 0 10px 10px 0;
 }
 
@@ -53,11 +47,8 @@
   margin-bottom: 0;
   color: #294295;
   font-size: 18px;
-  /* Increased from 17px */
   line-height: 1.7;
 }
-
-/* Responsive Styles */
 @media (max-width: 768px) {
   .simple-content {
     padding: 60px 0;
@@ -70,7 +61,6 @@
 
   .content-paragraphs {
     font-size: 18px;
-    /* Increased from 16px */
     line-height: 1.7;
   }
 
