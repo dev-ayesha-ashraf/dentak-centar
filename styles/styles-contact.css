@@ -20,9 +20,10 @@
 }
 
 .contact-form h2 {
-  font-size: 42px;
-  color: #294295;
-  margin-bottom: 40px;
+   font-size: 58px;
+  color: #000000;
+  line-height: 73px;
+  margin-bottom: 38px;
 }
 
 .form-group {
@@ -44,7 +45,9 @@
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 300;
+  color: #535353;
   font-family: 'Outfit', sans-serif;
   transition: border-color 0.3s ease;
 }
@@ -80,9 +83,10 @@
 }
 
 .contact-info-sidebar h3 {
-  font-size: 32px;
-  color: #294295;
-  margin-bottom: 40px;
+   font-size: 58px;
+  color: #000000;
+  line-height: 73px;
+  margin-bottom: 38px;
 }
 
 .contact-item-i {
@@ -120,9 +124,9 @@
 }
 
 .contact-details-i p {
-  font-size: 20px !important;
-  color: #666;
-  line-height: 1.5;
+ font-size: 22px;
+  font-weight: 300;
+  color: #535353;
 }
 
 .map-container {
@@ -138,10 +142,10 @@
 }
 
 .faq-section h2 {
-  text-align: center;
-  font-size: 42px;
-  color: #294295;
-  margin-bottom: 60px;
+  font-size: 58px;
+  color: #000000;
+  line-height: 73px;
+  margin-bottom: 38px;
 }
 .btn-contact {
   background-color: #A89C8C;
@@ -176,9 +180,10 @@
 }
 
 .faq-item h3 {
-  font-size: 20px;
-  color: #294295;
-  margin-bottom: 15px;
+  font-size: 58px;
+  color: #000000;
+  line-height: 73px;
+  margin-bottom: 38px;
 }
 
 .faq-item p {

@@ -11,24 +11,26 @@
 }
 
 .content-wrapper h2 {
-  font-size: 42px;
-  color: #294295;
-  margin-bottom: 60px;
-  text-align: center;
-  line-height: 1.3;
-  letter-spacing: -0.5px; 
+  font-size: 58px;
+  color: #000000;
+  line-height: 73px;
+  margin-bottom: 38px;
 }
 
 .content-paragraphs {
-  font-size: 21px; /* Slightly smaller for better line length */
-  line-height: 1.8;
-  color: #333;
-  text-align: left; /* Changed from justify for better readability */
+  font-size: 22px;
+  font-weight: 300;
+  color: #535353;
+  line-height: 28px;
+  text-align: left;
+  /* Changed from justify for better readability */
 }
 
 .content-paragraphs p {
-  margin-bottom: 35px; /* Increased from 25px */
-  padding: 0 10px; /* Added side padding */
+  margin-bottom: 35px;
+  /* Increased from 25px */
+  padding: 0 10px;
+  /* Added side padding */
 }
 
 /* Add visual separation between paragraphs */
@@ -40,15 +42,18 @@
 .content-highlight {
   background: rgba(76, 199, 221, 0.1);
   border-left: 4px solid #4CC7DD;
-  padding: 30px; /* Increased from 25px */
-  margin: 50px 10px 0 10px; /* Added horizontal margin */
+  padding: 30px;
+  /* Increased from 25px */
+  margin: 50px 10px 0 10px;
+  /* Added horizontal margin */
   border-radius: 0 10px 10px 0;
 }
 
 .content-highlight p {
   margin-bottom: 0;
   color: #294295;
-  font-size: 18px; /* Increased from 17px */
+  font-size: 18px;
+  /* Increased from 17px */
   line-height: 1.7;
 }
 
@@ -64,7 +69,8 @@
   }
 
   .content-paragraphs {
-    font-size: 18px; /* Increased from 16px */
+    font-size: 18px;
+    /* Increased from 16px */
     line-height: 1.7;
   }
 

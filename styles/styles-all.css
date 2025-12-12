@@ -524,9 +524,11 @@ body {
     margin-top: 0 !important;
     padding: 0 15px !important;
   }
-.logo{
-  margin-left: -15px;
-}
+
+  .logo {
+    margin-left: -15px;
+  }
+
   .nav-content {
     flex-wrap: wrap;
     justify-content: center;
