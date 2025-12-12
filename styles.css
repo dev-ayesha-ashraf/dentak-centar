@@ -170,6 +170,8 @@ body {
       height: 659px !important;
       object-fit: cover;
       margin-top: 40px;
+      border-top: 6px solid #FFFFFF;
+      border-left: 2px solid #FFFFFF;
     }
 
     .hero-svg-navigation {
@@ -647,7 +649,9 @@ body {
   justify-content: center;
   gap: 51px;
 }
-
+.image-one{
+  border: none !important;
+}
 .nav-btn img{
   width: 44px !important;
   height: 44px !important;
