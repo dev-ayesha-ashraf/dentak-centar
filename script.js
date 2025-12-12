@@ -210,14 +210,27 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   const phoneInputs = document.querySelectorAll('input[type="tel"]');
   phoneInputs.forEach(input => {
-    input.addEventListener('input', function () {
-      let value = this.value.replace(/\D/g, '');
-      if (value.startsWith('385')) {
-        value = '+' + value;
-      } else if (value.startsWith('0')) {
-        value = '+385' + value.substring(1);
+    input.addEventListener('input', function (e) {
+      const cursorPosition = this.selectionStart;
+
+      let value = this.value;
+      let cleanValue = value.replace(/\D/g, '');
+
+      if (cleanValue) {
+        if (cleanValue.startsWith('385') && !value.startsWith('+385')) {
+          value = '+' + cleanValue;
+        } else if (cleanValue.startsWith('0') && !value.startsWith('+385')) {
+          value = '+385' + cleanValue.substring(1);
+        } else {
+          value = cleanValue;
+        }
+
+        if (this.value !== value) {
+          this.value = value;
+
+          this.selectionStart = this.selectionEnd = Math.min(cursorPosition, value.length);
+        }
       }
-      this.value = value;
     });
   });
   document.addEventListener('keydown', function (e) {
